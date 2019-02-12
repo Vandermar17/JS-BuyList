@@ -5,11 +5,107 @@
     <title>My Page</title>
 
 
-    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="cont.css" />
 </head>
 <body>
-<h1>Hello World</h1>
-<p>Hello Git</p>
-<div class="text2018">Hi 2018!!!</div>
+    <div class = "container">
+        <div class ="left">
+		    <div class="search">
+			    <input type="search" name="q" placeholder="Назва товару" size="40"> 
+               <button class="submitButton">Додати</button>
+			</div>
+			<div class ="product">
+			     <div class="name">
+				     <h3>Помідори</h3>
+				 </div>
+				 <div class="addbutton">
+				     <button class="redButton">
+					 <i class="minusIcon">-</i>
+					 </button>
+					 <span class = "counter">1</span>
+					 <button class="greenButton">
+					 <i class="plusIcon">+</i>
+					 </button>
+				 </div>
+				 <div  class="buybuttons">
+				     <button class="buybutton">
+					<i class="buyIcon">Куплено</i>
+					</button>
+					<button class="removebutton">
+					<i class="removeIcon">x</i>
+					</button>
+				 </div>
+			</div>
+			<div class ="product">
+			     <div class="name">
+				     <h3>Сир</h3>
+				 </div>
+				 <div class="addbutton">
+				     <button class="redButton">
+					 <i class="minusIcon">-</i>
+					 </button>
+					 <span class= "counter">1</span>
+					 <button class="greenButton">
+					 <i class="plusIcon">+</i>
+					 </button>
+				 </div>
+				 <div  class="buybuttons">
+				     <button class="buybutton">
+					<i class="buyIcon">Куплено</i>
+					</button>
+					<button class="removebutton">
+					<i class="removeIcon">x</i>
+					</button>
+				 </div>
+			</div>
+			<div class ="product">
+			     <div class="name">
+				     <h3>Молоко</h2>
+				</div>
+				<div class="addbutton">
+				<button class="redButton">
+					 <i class="minusIcon">-</i>
+					 </button>
+					 <span class= "counter">1</span>
+					 <button class="greenButton">
+					 <i class="plusIcon">+</i>
+					 </button>
+				</div>
+				<div  class="buybuttons">
+				    <button class="buybutton">
+					<i class="buyIcon">Куплено</i>
+					</button>
+					<button class="removebutton">
+					<i class="removeIcon">x</i>
+					</button>
+				</div>
+			</div>
+        </div>
+        <div class ="right">
+		    <div class="planned">
+			    <h3>Залишилося</h3>
+			</div>
+			<div class ="list1">
+			    <span class="remainder">
+				    <span class="title">помідори</span>
+					<span class="orangeIcon">1</span>
+				</span>
+				<span class="remainder">
+				    <span class="title">cир</span>
+					<span class="orangeIcon">1</span>
+				</span>
+				<span class="remainder">
+				    <span class="title">молоко</span>
+					<span class="orangeIcon">1</span>
+				</span>
+			</div>
+			<div class ="bought">
+			    <h3>Куплено</h3>
+			</div>
+			<div class ="list2">
+			</div>
+        </div>
+   
+    </div>
 </body>
 </html>
