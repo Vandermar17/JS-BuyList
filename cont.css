@@ -6,35 +6,30 @@ body{
 	width:90%;
 	background-color: #DADADA;
 	font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    min-width: 620px;
 }
 .container{
    margin:0;
-   height:100%; 
+   height:100%;
 }
 .left{
    border-radius:6px;
-   padding-top:2%;
-   padding-bottom:2%;
-   padding-left:2%;
-   padding-right:2%;
-   height:90%; 
+    padding:2%;
+   height:90%;
    float:left;
-   width:60%; 
+   width:60%;
    background-color: #FFFAFA;
-   
-   
+
+
 }
 .right{
 	 border-radius:6px;
 	float:right;
-	padding-top:2%;
-    padding-bottom:2%;
-    padding-left:2%;
-    padding-right:2%;
+    padding:2%;
 	height:90%;
 	width:30%;
-    background-color: #FFFAFA;	
-	
+    background-color: #FFFAFA;
+
 }
 .search{
 	float:top;
@@ -44,9 +39,9 @@ body{
     padding-right:2%;
 	height:16%;
 	border-bottom:thin solid #DADADA;
-	
-	
-	
+
+
+
 }
 .product{
 	float:top;
@@ -56,8 +51,8 @@ body{
     padding-right:2%;
 	height:16%;
 	border-bottom:thin solid #DADADA;
-	
-	
+
+
 }
 
 .planned{
@@ -68,7 +63,7 @@ body{
     padding-right:2%;
 	height:12%;
 	border-bottom:thin solid #DADADA;
-	
+
 }
 .list1{
 	float:top;
@@ -78,7 +73,7 @@ body{
     padding-right:2%;
 	height:24%;
 	border-bottom:thin solid #DADADA;
-	
+
 }
 .bought{
 	float:top;
@@ -88,7 +83,7 @@ body{
     padding-right:2%;
 	height:12%;
 	border-bottom:thin solid #DADADA;
-	
+
 }
 .list2{
 	float:top;
@@ -97,8 +92,8 @@ body{
     padding-left:2%;
     padding-right:2%;
 	height:24%;
-	border-bottom:thin solid #DADADA;	
-	
+	border-bottom:thin solid #DADADA;
+
 }
 
 .name{
@@ -106,22 +101,23 @@ body{
 	height:96%;
 	width:22%;
 	text-align:left;
-	
+
 }
 .addbutton{
 	text-align:center;
 	padding-top:.6em;
-	padding-left:.8em;
-	padding-right:.8em;
+	padding-left:.4em;
+	padding-right:.4em;
 	float:left;
 	height:96%;
 	width:33%;
-	
+
+
 }
 .buybuttons{
 	padding-top:.6em;
-	padding-left:.8em;
-	padding-right:.8em;
+	padding-left:.4em;
+	padding-right:.4em;
 	text-align:center;
 	float:right;
 	height:96%;
@@ -141,6 +137,7 @@ body{
     padding-left: 1em;
 }
 .submitButton{
+    position:relative;
 	border:none;
 	box-shadow: 0 0 0 1px rgba(34,36,38,.15) inset, 0 -0.3em 0 0 rgba(34,36,38,.15) inset;
 	padding-top: .75em;
@@ -150,7 +147,26 @@ body{
 	padding-right: 2em;
 	background-color:	#1E90FF;
 	color: #FFF;
-	
+    position:relative;
+
+}
+button::before{
+    background-color:blueviolet;
+    visibility: hidden;
+    font-size: 0px;
+    content:attr(data-tooltip);
+    height:0px;
+    transition: 1s all ease;
+    position:absolute;
+    width:140px;
+
+
+    border-radius:6px;
+
+    bottom:35px;
+
+
+
 }
 
 .remainder{
@@ -193,18 +209,19 @@ body{
 }
 .redButton{
 	border:none;
-	background-color:#f44336;
+	background-color:lightpink;
 	border-radius:80%;
-	border-color:#f44336;
+	border-color:lightpink;
 	padding-right:1em;
 	padding-left:1em;
 	padding-top:.5em;
 	padding-bottom:.5em;
 	text-align:center;
-	box-shadow: 0 0 0 1px rgba(34,36,38,.15) 
+	box-shadow: 0 0 0 1px rgba(34,36,38,.15)
 	inset, 0 -0.3em 0 0 rgba(34,36,38,.15) inset;
 	color: #FFF;
-	
+    position:relative;
+
 }
 .greenButton{
 	border:none;
@@ -216,9 +233,10 @@ body{
 	padding-left:.9em;
 	padding-top:.5em;
 	padding-bottom:.5em;
-    box-shadow: 0 0 0 1px rgba(34,36,38,.15) 
-	inset, 0 -0.3em 0 0 rgba(34,36,38,.15) inset;	
+    box-shadow: 0 0 0 1px rgba(34,36,38,.15)
+	inset, 0 -0.3em 0 0 rgba(34,36,38,.15) inset;
 	color: #FFF;
+    position:relative;
 }
 
 .counter{
@@ -237,14 +255,15 @@ body{
 .buybutton{
 	border:none;
 	border-radius:5px;
-	background-color:#DADADA;
+	background-color:#dfdfe1;
 	text-align:center;
 	padding-top:.5em;
 	padding-bottom:.5em;
 	padding-right:1em;
 	padding-left:1em;
-	box-shadow: 0 0 0 1px rgba(34,36,38,.15) 
+	box-shadow: 0 0 0 1px rgba(34,36,38,.15)
 	inset, 0 -0.3em 0 0 rgba(34,36,38,.15) inset;
+    position:relative;
 }
 .removebutton{
 	border:none;
@@ -259,12 +278,85 @@ body{
 	box-shadow: 0 0 0 1px rgba(34,36,38,.15)
 	inset, 0 -0.3em 0 0 rgba(34,36,38,.15) inset;
 	color: #FFF;
-	
+    position:relative;
+
 }
 
+.bage{
+    text-align: center;
+    color:#FFF;
+    position:fixed;
+    height:120px;
+    width:150px;
+    bottom:-60px;
+    left:100px;
+    background-color:blueviolet ;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transition: 1s all ease;
+
+}
+
+.bage:hover{
+    background-color: mediumslateblue;
+    bottom:0px;
+}
+#name{
+    font-weight: bold;
+}
+ @media print{
+     .bage{
+       border:thin solid violet;
+
+     }
+     #bagename{
+         display: none;
+
+     }
+     #createText{
+         visibility: hidden;
+     }
+     #bagename:after{
+         content:"Vladislav Haponenko";
+     }
 
 
 
+ }
+@media(max-width:500px){
+    .left{
+        float:none;
+    }
+    .right{
+        margin-top:30px;
+        border-radius:6px;
+        padding:2%;
+        height:90%;
+        float:none;
+        width:60%;
+        background-color: #FFFAFA;
+
+    }
+}
+
+button:hover::before{
+    visibility: visible;
+    text-align: center;
+    font-size: 12px;
+    color:#FFF;
+    height:19px;
+    z-index: 1;
+    padding:8px;
+
+
+
+
+
+
+
+
+
+}
 
 
 
