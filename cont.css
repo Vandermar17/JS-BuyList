@@ -2,7 +2,7 @@ body{
 	margin:5%;
 	padding:0;
 	padding-bottom:0;
-	height:300px;
+	//height:300px;
 	width:90%;
 	background-color: #DADADA;
 	font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
@@ -10,7 +10,7 @@ body{
 }
 .container{
    margin:0;
-   height:100%;
+	height:100%;
 }
 .left{
    border-radius:6px;
@@ -43,16 +43,20 @@ body{
 
 
 }
-.product{
-	float:top;
+.product , .productHid{
+
 	padding-top:2%;
     padding-bottom:2%;
     padding-left:2%;
     padding-right:2%;
-	height:16%;
+	height:35px;
 	border-bottom:thin solid #DADADA;
 
 
+}
+.productHid {
+	display:none;
+	visibility:hidden;
 }
 
 .planned{
@@ -96,12 +100,18 @@ body{
 
 }
 
-.name{
+.remainderHid,.remainderHidh{
+	display:none;
+}
+.name,.inputerh{
 	float:left;
 	height:96%;
 	width:22%;
 	text-align:left;
 
+}
+.inputerh{
+	display:none;
 }
 .addbutton{
 	text-align:center;
@@ -114,7 +124,7 @@ body{
 
 
 }
-.buybuttons{
+.buybuttons,.buybuttonsh{
 	padding-top:.6em;
 	padding-left:.4em;
 	padding-right:.4em;
@@ -122,6 +132,9 @@ body{
 	float:right;
 	height:96%;
 	width:33%;
+}
+.buybuttonsh{
+	display:none;
 }
 .search input[type="search"]{
 	border: 1px solid rgba(34, 36, 38, .15);
@@ -169,7 +182,7 @@ button::before{
 
 }
 
-.remainder{
+.remainder,.remainderh{
 	padding: .58em .8em;
     padding-top: 0.58em;
     padding-right: 0.8em;
@@ -187,6 +200,10 @@ button::before{
     border-bottom-right-radius: 0.28rem;
     border-bottom-left-radius: 0.28rem;
 	margin-bottom: 3px;
+}
+.remainderh{
+	display:none;
+    text-decoration:line-through;
 }
 
 .orangeIcon{
@@ -252,7 +269,7 @@ button::before{
 	}
 
 
-.buybutton{
+.buybutton,.buybuttonh{
 	border:none;
 	border-radius:5px;
 	background-color:#dfdfe1;

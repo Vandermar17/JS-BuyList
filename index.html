@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html>
-<title>My Page</title>
-<link rel="stylesheet" type="text/css" href="cont.css"/>
+<head>
+    <title>My Page</title>
+    <link rel="stylesheet" type="text/css" href="cont.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="behavior.js"></script>
 </head>
 <body>
 <div class="container">
     <div class="left">
         <div class="search">
-            <input type="search" name="q" placeholder="Назва товару" size="40">
+            <input type="search" name="q" placeholder="Назва товару" size="40" id="search">
             <button class="submitButton" data-tooltip="Додати товар до списку">Додати</button>
         </div>
-        <div class="product">
+        <div class="productHid">
             <div class="name">
-                <h3>Помідори</h3>
+                <h3 class="nameOP">Помідори</h3>
             </div>
-            <div class="addbutton" >
+            <div class="inputerh">
+                <input type="text" placeholder="Нова назва"class="inputer">
+            </div>
+            <div class="addbutton">
                 <button class="redButton" data-tooltip="Зменшити кількість товару">
                     <i class="minusIcon">-</i>
                 </button>
@@ -27,14 +33,52 @@
                 <button class="buybutton" data-tooltip="Купити товар">
                     <i class="buyIcon">Куплено</i>
                 </button>
-                <button class="removebutton" data-tooltip="відмінити покупку">
+                <button class="removebutton" data-tooltip="відмінити покупку" >
                     <i class="removeIcon">x</i>
+                </button>
+            </div>
+            <div class="buybuttonsh">
+                <button class="buybuttonh" data-tooltip=" Не Купити товар" >
+                    <i class="buyIcon"> Не Куплено</i>
                 </button>
             </div>
         </div>
         <div class="product">
             <div class="name">
-                <h3>Сир</h3>
+                <h3 class="nameOP">Помідори</h3>
+            </div>
+            <div class="inputerh">
+                <input type="text" placeholder="Нова назва" class="inputer">
+            </div>
+            <div class="addbutton">
+                <button class="redButton" data-tooltip="Зменшити кількість товару">
+                    <i class="minusIcon">-</i>
+                </button>
+                <span class="counter">1</span>
+                <button class="greenButton" data-tooltip="Додати товар до списку">
+                    <i class="plusIcon">+</i>
+                </button>
+            </div>
+            <div class="buybuttons">
+                <button class="buybutton" data-tooltip="Купити товар" id="buyP">
+                    <i class="buyIcon">Куплено</i>
+                </button>
+                <button class="removebutton" data-tooltip="відмінити покупку" id="removeP">
+                    <i class="removeIcon">x</i>
+                </button>
+            </div>
+            <div class="buybuttonsh">
+                <button class="buybuttonh" data-tooltip="Не Купити товар" >
+                    <i class="buyIcon"> Не Куплено</i>
+                </button>
+            </div>
+        </div>
+        <div class="product">
+            <div class="name">
+                <h3 class="nameOP">Сир</h3>
+            </div>
+            <div class="inputerh">
+                <input type="text" placeholder="Нова назва" class="inputer">
             </div>
             <div class="addbutton">
                 <button class="redButton" data-tooltip="Зменшити кількість товару">
@@ -46,17 +90,25 @@
                 </button>
             </div>
             <div class="buybuttons">
-                <button class="buybutton" data-tooltip="Купити товар">
+                <button class="buybutton" data-tooltip="Купити товар" id="buyC">
                     <i class="buyIcon">Куплено</i>
                 </button>
-                <button class="removebutton" data-tooltip="відмінити покупку">
+                <button class="removebutton" data-tooltip="відмінити покупку" id="removeC">
                     <i class="removeIcon">x</i>
+                </button>
+            </div>
+            <div class="buybuttonsh">
+                <button class="buybuttonh" data-tooltip="Не  Купити товар" >
+                    <i class="buyIcon"> Не Куплено</i>
                 </button>
             </div>
         </div>
         <div class="product">
             <div class="name">
-                <h3>Молоко</h3>
+                <h3 class="nameOP">Молоко</h3>
+            </div>
+            <div class="inputerh">
+                <input type="text" placeholder="Нова назва" class="inputer">
             </div>
             <div class="addbutton">
                 <button class="redButton" data-tooltip="Зменшити кількість товару">
@@ -68,37 +120,63 @@
                 </button>
             </div>
             <div class="buybuttons">
-                <button class="buybutton" data-tooltip="Купити товар">
+                <button class="buybutton" data-tooltip="Купити товар" id="buyM">
                     <i class="buyIcon">Куплено</i>
                 </button>
-                <button class="removebutton" data-tooltip="відмінити покупку">
+                <button class="removebutton" data-tooltip="відмінити покупку" id="removeM">
                     <i class="removeIcon">x</i>
                 </button>
             </div>
+			 <div class="buybuttonsh">
+            <button class="buybuttonh" data-tooltip=" Не Купити товар" >
+                <i class="buyIcon"> Не Куплено</i>
+            </button>
         </div>
+        </div>
+       
     </div>
     <div class="right">
         <div class="planned">
             <h3>Залишилося</h3>
         </div>
         <div class="list1">
+            <span class="remainderHid">
+				    <span class="title">Something</span>
+					<span class="orangeIcon">1</span>
+				</span>
 			    <span class="remainder">
-				    <span class="title">помідори</span>
-					<span class="orangeIcon">1</span>
+				    <span class="title">Помідори</span>
+					<span class="orangeIcon" id="Помідори">1</span>
 				</span>
             <span class="remainder">
-				    <span class="title">cир</span>
-					<span class="orangeIcon">1</span>
+				    <span class="title">Сир</span>
+					<span class="orangeIcon" id="Сир">1</span>
 				</span>
             <span class="remainder">
-				    <span class="title">молоко</span>
-					<span class="orangeIcon">1</span>
+				    <span class="title">Молоко</span>
+					<span class="orangeIcon" id="Молоко">1</span>
 				</span>
         </div>
         <div class="bought">
             <h3>Куплено</h3>
         </div>
         <div class="list2">
+            <span class="remainderHidh">
+				    <span class="title">Something</span>
+					<span class="orangeIcon" id="Soms">1</span>
+				</span>
+            <span class="remainderh">
+				    <span class="title">Помідори</span>
+					<span class="orangeIcon" id="Помідориh">1</span>
+				</span>
+            <span class="remainderh">
+				    <span class="title">Сир</span>
+					<span class="orangeIcon" id="Сирh">1</span>
+				</span>
+            <span class="remainderh">
+				    <span class="title">Молоко</span>
+					<span class="orangeIcon" id="Молокоh">1</span>
+				</span>
         </div>
     </div>
 
