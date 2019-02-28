@@ -112,6 +112,11 @@ body{
 }
 .inputerh{
 	display:none;
+
+}
+.inputer{
+	width:70px;
+	margin-top:15px;
 }
 .addbutton{
 	text-align:center;
